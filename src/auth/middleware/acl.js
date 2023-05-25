@@ -12,6 +12,7 @@ module.exports = (capability) => {
         next('Access Denied');
       }
     } catch (e) {
+      console.error(e.message);
       next('Invalid Login');
     }
 

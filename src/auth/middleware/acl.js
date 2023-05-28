@@ -6,9 +6,11 @@ module.exports = (capability) => {
 
     try {
       if (req.user.capabilities.includes(capability)) {
+        console.log(`1****************${req.user.capabilities}****************`);
         next();
       }
       else {
+        console.log(`2****************${req.user.capabilities}****************`);
         next('Access Denied');
       }
     } catch (e) {

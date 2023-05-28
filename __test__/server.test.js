@@ -108,50 +108,5 @@ describe('API Routes', () => {
     expect(response.body).toEqual(1);
   });
 
-  // **************
-
-  // const mockModel = {
-  //   create: jest.fn(),
-  //   get: jest.fn(),
-  //   update: jest.fn(),
-  //   delete: jest.fn(),
-  // };
-
-  // beforeEach(() => {
-  //   // Reset mock function calls before each test
-  //   Object.values(mockModel).forEach((mockFn) => mockFn.mockReset());
-  // });
-
-  // test('POST /api/v1/:model handles errors and returns 500 status code', async () => {
-  //   const newItem = { name: 'Test Item' };
-  //   // Mock the create method to throw an error
-  //   mockModel.create.mockImplementation(() => {
-  //     throw new Error('Database error');
-  //   });
-
-  //   // Replace `:model` with the actual model name
-  //   const response = await request.post('/api/v1/food').send(newItem);
-
-  //   expect(response.status).toBe(500);
-  //   expect(response.body).toHaveProperty('error');
-  //   expect(response.body.error).toBe('Internal Server Error');
-
-  //   expect(mockModel.create).toHaveBeenCalledWith(newItem);
-  // });
-
-  // test('GET /api/v1/:model handles errors and returns 500 status code', async () => {
-  //   // Mock the get method to throw an error
-  //   mockModel.get.mockImplementation(() => {
-  //     throw new Error('Database error');
-  //   });
-
-  //   // Replace `:model` with the actual model name
-  //   const response = await request.get('/api/v1/food');
-
-  //   expect(response.status).toBe(500);
-  //   expect(response.body).toHaveProperty('error');
-  //   expect(response.body.error).toBe('Internal Server Error');
-
-  //   expect(mockModel.get).toHaveBeenCalled();
-  // });
+  
 });

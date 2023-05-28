@@ -21,9 +21,9 @@ Code was written while Ryan Gallaway taught a class for API Server.
 
 #### `.env` requirements (where applicable)
 
-port variable exists within the env sample
+Port variable exists within the env sample.
 
-Ensure to have sequelize database URL in the env file
+Ensure to have sequelize database URL in the env file.
 
 #### How to initialize/run your application (where applicable)
 

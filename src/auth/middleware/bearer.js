@@ -6,7 +6,7 @@ module.exports = async (req, res, next) => {
 
   try {
 
-    if (!req.headers.authorization) { _authError() }
+    if (!req.headers.authorization) {next('Invalid Login'); }
 
     const token = req.headers.authorization.split(' ').pop();
     const validUser = await users.authenticateToken(token);
@@ -15,11 +15,7 @@ module.exports = async (req, res, next) => {
     next();
 
   } catch (e) {
-    console.error(e.message);
-    _authError();
-  }
-
-  function _authError() {
     next('Invalid Login');
   }
+
 }
